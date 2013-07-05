@@ -14,7 +14,7 @@ function Generator() {
 util.inherits(Generator, ScriptBase);
 
 Generator.prototype.createFilterFiles = function createFilterFiles() {
-  this.appTemplate('filter', 'scripts/filters/' + this.name);
-  this.testTemplate('spec/filter', 'filters/' + this.name);
+  this.appTemplate('filter', 'js/filters/' + this.name);
+  //this.testTemplate('spec/filter', 'filters/' + this.name);
   this.addScriptToIndex('filters/' + this.name);
 };

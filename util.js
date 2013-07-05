@@ -11,6 +11,7 @@ module.exports = {
 function rewriteFile (args) {
   args.path = args.path || process.cwd();
   var fullPath = path.join(args.path, args.file);
+  console.log(fullPath);
 
   args.haystack = fs.readFileSync(fullPath, 'utf8');
   var body = rewrite(args);

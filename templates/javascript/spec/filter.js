@@ -7,7 +7,7 @@ describe('Filter: <%= _.camelize(name) %>', function () {
 
   // initialize a new instance of the filter before each test
   var <%= _.camelize(name) %>;
-  beforeEach(inject(function ($filter) {
+  beforeEach(inject(function($filter) {
     <%= _.camelize(name) %> = $filter('<%= _.camelize(name) %>');
   }));
 

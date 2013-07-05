@@ -18,7 +18,7 @@ var Generator = module.exports = function Generator(args, options) {
     try {
       this.env.options.appPath = require(path.join(process.cwd(), 'bower.json')).appPath;
     } catch (e) {}
-    this.env.options.appPath = this.env.options.appPath || 'app';
+    this.env.options.appPath = this.env.options.appPath || 'public';
   }
 
   this.appPath = this.env.options.appPath;
@@ -42,15 +42,15 @@ var Generator = module.exports = function Generator(args, options) {
     args.push('--minsafe');
   }
 
-  this.hookFor('angular:common', {
+  this.hookFor('zdrojak:common', {
     args: args
   });
 
-  this.hookFor('angular:main', {
+  this.hookFor('zdrojak:main', {
     args: args
   });
 
-  this.hookFor('angular:controller', {
+  this.hookFor('zdrojak:controller', {
     args: args
   });
 

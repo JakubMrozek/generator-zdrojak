@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('<%= _.camelize(appname) %>App')
-  .directive('<%= _.camelize(name) %>', function () {
+angular.module('<%= appname.toLowerCase() %>.directive').directive('<%= _.camelize(name) %>', [function () {
     return {
       template: '<div></div>',
       restrict: 'E',
@@ -9,4 +8,4 @@ angular.module('<%= _.camelize(appname) %>App')
         element.text('this is the <%= _.camelize(name) %> directive');
       }
     };
-  });
+  }]);

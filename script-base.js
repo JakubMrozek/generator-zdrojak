@@ -88,12 +88,12 @@ Generator.prototype.htmlTemplate = function (src, dest) {
 Generator.prototype.addScriptToIndex = function (script) {
   try {
     var appPath = this.env.options.appPath;
-    var fullPath = path.join(appPath, 'index.html');
+    var fullPath = path.join('/views/layout.html');
     angularUtils.rewriteFile({
       file: fullPath,
       needle: '<!-- endbuild -->',
       splicable: [
-        '<script src="scripts/' + script + '.js"></script>'
+        '<script src="/js/' + script + '.js"></script>'
       ]
     });
   } catch (e) {
