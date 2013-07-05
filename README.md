@@ -28,9 +28,9 @@ yo zdrojak:route myroute
 
 Produces `public/js/controllers/myroute.js`:
 ```javascript
-angular.module('myMod').controller('MyrouteCtrl', function ($scope) {
+angular.module('myMod').controller('MyrouteCtrl', ['$scope', function ($scope) {
   // ...
-});
+}]);
 ```
 
 Produces `public/views/myroute.html`:
@@ -48,9 +48,9 @@ yo zdrojak:controller user
 
 Produces `public/js/controllers/user.js`:
 ```javascript
-angular.module('myMod').controller('UserCtrl', function ($scope) {
+angular.module('myMod').controller('UserCtrl', ['$scope', function ($scope) {
   // ...
-});
+}]);
 ```
 ### Directive
 Generates a directive in `public/js/directives`.
@@ -62,7 +62,7 @@ yo zdrojak:directive myDirective
 
 Produces `public/js/directives/myDirective.js`:
 ```javascript
-angular.module('myMod').directive('myDirective', function () {
+angular.module('myMod').directive('myDirective', [function () {
   return {
     template: '<div></div>',
     restrict: 'E',
@@ -70,7 +70,7 @@ angular.module('myMod').directive('myDirective', function () {
       element.text('this is the myDirective directive');
     }
   };
-});
+}]);
 ```
 
 ### Filter
@@ -83,11 +83,11 @@ yo zdrojak:filter myFilter
 
 Produces `public/js/filters/myFilter.js`:
 ```javascript
-angular.module('myMod').filter('myFilter', function () {
+angular.module('myMod').filter('myFilter', [function () {
   return function (input) {
     return 'myFilter filter:' + input;
   };
-});
+}]);
 ```
 
 ### View
