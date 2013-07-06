@@ -1,6 +1,3 @@
-zdrojak-angular-generator
-=========================
-
 # AngularJS generator pro Zdrojak
 
 Based on [generator-angular](https://github.com/yeoman/generator-angular/)
