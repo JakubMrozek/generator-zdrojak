@@ -25,7 +25,7 @@ yo zdrojak:route myroute
 
 Produces `public/js/controllers/myroute.js`:
 ```javascript
-angular.module('myMod').controller('MyrouteCtrl', ['$scope', function ($scope) {
+angular.module('zdrojak.controller').controller('MyrouteCtrl', ['$scope', function ($scope) {
   // ...
 }]);
 ```
@@ -45,7 +45,7 @@ yo zdrojak:controller user
 
 Produces `public/js/controllers/user.js`:
 ```javascript
-angular.module('myMod').controller('UserCtrl', ['$scope', function ($scope) {
+angular.module('zdrojak.controller').controller('UserCtrl', ['$scope', function ($scope) {
   // ...
 }]);
 ```
@@ -59,7 +59,7 @@ yo zdrojak:directive myDirective
 
 Produces `public/js/directives/myDirective.js`:
 ```javascript
-angular.module('myMod').directive('myDirective', [function () {
+angular.module('zdrojak.directive').directive('myDirective', [function () {
   return {
     template: '<div></div>',
     restrict: 'E',
@@ -80,7 +80,7 @@ yo zdrojak:filter myFilter
 
 Produces `public/js/filters/myFilter.js`:
 ```javascript
-angular.module('myMod').filter('myFilter', [function () {
+angular.module('zdrojak.filter').filter('myFilter', [function () {
   return function (input) {
     return 'myFilter filter:' + input;
   };
@@ -110,7 +110,7 @@ yo zdrojak:service myService
 
 Produces `public/js/services/myService.js`:
 ```javascript
-angular.module('myMod').factory('myService', function () {
+angular.module('zdrojak.service').factory('myService', function () {
   // ...
 });
 ```
